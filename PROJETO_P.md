@@ -1,6 +1,5 @@
 # Phyton
 #alguns projetos iniciais para meu curso na DIO 
-
 from IPython import display
 import numpy as np
 import cv2
@@ -16,8 +15,6 @@ with open(image_path, 'rb') as f:
 
 image = Image.open(image_path)
 width, height = image.size
-
-
 display.display(display.Image(image_path, width =1024))
 
 #Convertendo e printando a imagem em tons de cinza
@@ -35,4 +32,3 @@ cv2_imshow(imagem_convertida)
 imagem_binario = cv2.threshold(imagem_convertida, 127, 255, cv2.THRESH_BINARY)
 ib = cv2.threshold(imagem_convertida, 127, 255, cv2.THRESH_BINARY)
 cv2_imshow(imagem_binario[1])
-
